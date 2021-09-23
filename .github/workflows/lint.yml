@@ -15,10 +15,11 @@ jobs:
         with:
           python-version: "3.8"
       - name: Run flake8
-        uses: julianwachholz/flake8-action@main
+        uses: julianwachholz/flake8-action@feature/plugins
         with:
           checkName: "Python Lint"
           path: src
+          plugins: pep8-naming
           config: custom_config.ini
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
