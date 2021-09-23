@@ -5,5 +5,10 @@ def main():
     print ("hello")
 
 
+class bad_class_name:
+    # pep8-naming should complain about this
+    pass
+
+
 if __name__  == "__main__":
     main()
